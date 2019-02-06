@@ -1,4 +1,4 @@
-@Library('github.com/fabric8io/osio-pipeline@master') _
+@Library('github.com/piyush1594/osio-pipeline@revert_branch') _
 
 osio {
 
@@ -7,7 +7,7 @@ osio {
   ci {
 
     def resources = processTemplate(params: [
-          release_version: "1.0.${env.BUILD_NUMBER}"
+          RELEASE_VERSION: "1.0.${env.BUILD_NUMBER}"
     ])
 
     build resources: resources
@@ -17,7 +17,7 @@ osio {
   cd {
 
     def resources = processTemplate(params: [
-          release_version: "1.0.${env.BUILD_NUMBER}"
+          RELEASE_VERSION: "1.0.${env.BUILD_NUMBER}"
     ])
 
     build resources: resources
