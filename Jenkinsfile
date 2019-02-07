@@ -13,9 +13,6 @@ osio {
     build resources: resources
 
   }
-  
-  
-  
 
   cd {
 
